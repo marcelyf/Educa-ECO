@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login2.css">
+    <title>login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="row">
+        <div class="container"> 
+            <div class="card">
+                <div class="login-box">
+                    <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" style="cursor:pointer;">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" style="cursor:pointer;">Cadastro</label>
+                        <div class="login-space">
+                            <!-- area do login -->
+                            <div class="login">
+                                <form action="validados.php" method="get"> <!-- buscar a informação dentro do bd-->
+                                <div class="grupo"> <label for="user" class="label">Usuário</label> <input id="user" type="text" class="input" placeholder="Insira seu usuário"> </div>
+                                <div class="grupo"> <label for="pass" class="label">Senha</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Insira sua senha"> </div>
+                                <div class="grupo"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Me mantenha conectado</label> </div>
+                                <div class="grupo"> <input type="submit" style="cursor: pointer;" class="button" value="Entrar"> </div>
+                                <div class="hr"></div>
+                                <div class="foot"> <a href="#">Esqueceu sua senha?</a> </div>
+                            </div>
+                        </form>
+                            <!-- para do cadastro -->
+                            <div class="cadastro">
+                                <form action="validados.php" method="POST"> <!-- enviar a informação para o bd -->
+                                <div class="grupo"> <label for="user" class="label">Usuário</label> <input id="user" type="text" class="input" placeholder="Crie seu usuário"> </div>
+                                <div class="grupo"> <label for="pass" class="label">Senha</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Crie sua senha"> </div>
+                                <div class="grupo"> <label for="pass" class="label">Repita sua senha</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Repita sua senha"> </div>
+                                <div class="grupo"> <label for="pass" class="label">Insira seu email</label> <input id="pass" type="text" class="input" placeholder="Insira seu email"> </div>
+                                <div class="grupo"> <input type="submit" style="cursor: pointer;" class="button" value="Cadastrar"> </div>
+                                <div class="hr"></div>
+                                <div class="foot"> <label for="tab-1" style="cursor: pointer;">Já é membro?</label> </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

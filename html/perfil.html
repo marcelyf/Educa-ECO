@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Perfil</title>
+</head>
+<body>
+
+  <div id="header">
+    <a id="logo1" href=""><img src="../img/logo.png" alt="">Educa Eco</a>
+    <div id="nav">
+      <button aria-label="Abrir Menu" id="btn" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html/simulador.html">Calcule seu consumo de água</a></li>
+        <li><a href="html/ecopontos.html">Locais de descarte</a></li>
+        <li><a href="../html/artigos_principal.html">Artigos</a></li>
+        <li><a href="html/desafio.html">Desafios</a></li>
+        <li><a href="html/ong.html">Ongs</a></li>
+        <a href="html/login.html"><button id="responsivobotao">Entrar</button></a>
+      </ul>
+
+        <div id="socorro">
+        <input type="checkbox" id="click" onclick="func()">
+        <label for="click" class="clicar">
+        <img src="../img/angela111.jpg" alt="" width="40px" height="40px" id="icone">
+        </div>
+        <div id="sair">
+          <img src="../img/sair.png" alt="" width="30px" height="30px">
+          <p>Sair</p>
+        </div>
+        </label>
+    </div>
+  </div>
+
+
+    <div id="container">
+    <div id="item1">
+      <button id ="btn-close" onclick="fechar()"><img src="../img/fechar.png" alt=""></button>
+      <button id="botao" data-bs-toggle="modal" data-bs-target="#alterar">Alterar perfil</button>
+      </div>
+    <div class="perfil">
+      <img  src="../img/angela111.jpg" alt="">
+      <p id="nick">Angela</p>
+      <p id="ponto">200 pontos</p>
+      <p id="ponto">02/31 desafios realizados</p>  
+    </div>
+    <div class="recompensa">
+      <img src="../img/plantinha_5___1_-removebg-preview.png" alt="" width="350vw">
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="alterar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Alteração do perfil</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <button id="botao"  data-bs-toggle="modal" data-bs-target="#email">Alterar email</button>
+      <button id="botao"  data-bs-toggle="modal" data-bs-target="#senha">Alterar senha</button>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="email" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alteração do perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div id="usuario">
+            <h3>Nome de usuário</h3>
+            <div>
+            <label>Nome atual:</label>
+            <p id="nome">Giovana</p>
+            </div>
+            <div>
+            <p><label for="nickNovo">Novo novo de usuário:</label></p>
+            <input id="nickNovo" name="nickNovo" type="text">
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+        <button type="button" class="btn btn-primary">Salvar alterações</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="senha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Alteração do perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div id="pass" >
+            <h3>Alterar senha</h3>
+    
+            <div>
+              <p><label for="senha">Senha atual:</label></p>
+              <input id="password" name="password" type="text">
+            </div>
+    
+            <div>
+              <p><label for="senhanova">Nova senha:</label></p>
+              <input id="senhanova" name="senhanova" type="text">
+            </div>
+    
+            <div>
+              <p><label for="senhanova">Digite novamente a nova senha:</label></p>
+              <input id="senhanova"  name="senhanova" type="text">
+            </div>
+    
+          </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+          <button type="button" class="btn btn-primary">Salvar alterações</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+
+    <footer>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur error iure quia dignissimos corporis laborum tempora suscipit aliquam officiis itaque doloremque, harum atque eos cum at sapiente pariatur nulla accusantium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo odit dicta recusandae quia asperiores, soluta quam, nam quasi ducimus nisi illum id in cumque assumenda autem qui optio natus.
+    </footer>
+
+        <script>
+
+        </script>
+
+<script src="../js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

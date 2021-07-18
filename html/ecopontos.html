@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angela Filipini, Caio Moreira, Giovana Santana, Karina Izo, Marcely Francisco, Murilo Vitale, Victor Frohlich e Wendrio Vale">
+    <meta nome="keywords" content="Ecopontos, Pontos de descarte, Lixo, Coleta Seletiva">
+    <meta nome="description" content="Locais de descarte apropriado do lixo para coleta seletiva">
+    <meta nome="robots" content="index, follow">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/ecopontos.css">
+    <title>Educa ECO</title>
+</head>
+<body>
+    
+    <!-- cabeçalho -->
+    <div id="header">
+        <a id="logo1" href="../index.html"><img src="../img/logo.png" alt="">Educa Eco</a>
+        <div id="nav">
+          <button aria-label="Abrir Menu" id="btn" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/simulador.html">Calcule seu consumo de água</a></li>
+            <li><a href="../html/ecopontos.html">Locais de descarte</a></li>
+            <li><a href="../html/artigos_principal.html">Artigos</a></li>
+            <li><a href="../html/desafio.html">Desafios</a></li>
+            <li><a href="../html/ong.html">Ongs</a></li>
+            <a href="html/login.html"><button id="responsivobotao">Entrar</button></a>
+          </ul>
+          <a href="../html/login.html"><button class="botao">Entrar</button></a>
+        </div>
+    </div>
+
+    <!-- faixa -->
+    <div id="faixaint">
+        <div id="faixa-espaco">
+            <img src="../img/pontos-rafiki.png" alt="Pontos">
+            <section id="faixa">
+                <h1>ECOPONTOS</h1>
+                <h2>Encontre locais próximos a você que realizam coleta seletiva e descarte seu lixo reciclável de modo adequado</h2>
+                <h3>*Pontos localizados no município de São Paulo</h3>
+            </section>
+        </div>
+    </div>
+    <main>
+        <div id="principal">
+            <!-- mapa -->
+            <div id="local-mapa">
+                <div id="map-p">
+                    <p>Digite seu endereço no campo de pesquisa abaixo para encontrar o(s) ecopontos(s) perto de você</p>
+                </div>
+                <div id="mapa">
+                    <div id="map"></div>
+                </div>
+            </div>
+
+            <!-- endereço -->
+            <div id="local-endereco">
+                <div id="end-p">
+                    <p>Lista dos locais</p>
+                </div>
+                <div>
+                    <div id="endereco">
+                        <div>
+                            <p><span>Ecoponto Alexios Jafet</span> <br> Av. Alexios Jafet, 209 - Jardim Ipanema (Zona Oeste), São Paulo - SP, 05182-360</p>
+                            <p><span>Ecoponto Alto de Pinheiros</span> <br> Praça Arcipreste Anselmo de Oliveira - Alto de Pinheiros, São Paulo - SP, 05425-070</p>
+                            <p><span>Ecoponto Alvarenga</span> <br> Estr. do Alvarenga, 2475 - Jardim Itapura, São Paulo - SP, 04467-000</p>
+                            <p><span>Ecoponto Anhaia Mello</span> <br> Av. Professor Luiz Ignácio Anhaia Mello, 2233 - Vila Prudente, São Paulo - SP, 03155-100</p>
+                            <p><span>Ecoponto Anselmo Machado</span> <br> Av. Paulo Lincoln do Valle Pontin, 763 - Jaçanã, São Paulo - SP, 02273-011</p>
+                            <p><span>Ecoponto Antártica</span> <br> R. Dom Aquino, 309 - Jardim Antartica, São Paulo - SP, 02652-170</p>
+                            <p><span>Ecoponto Aricanduva I</span> <br> R. Profa. Alzira de Oliveira Gilioli, 400 - Jardim Nice, São Paulo - SP, 03905-090</p>
+                            <p><span>Ecoponto Astarte</span> <br> Rua Astarté, 500 - Vila Carrao, São Paulo - SP, 03447-140</p>
+                            <p><span>Ecoponto Bandeirantes</span> <br> R. Itaiquara, 237 - Parque Monteiro Soares, São Paulo - SP, 02802-070</p>
+                            <p><span>Ecoponto Barra Funda</span> <br> R. Cônego Vicente Miguel Marino, 22 - Barra Funda, São Paulo - SP, 01135-020</p>
+                            <p><span>Ecoponto Belém</span> <br> R. Artur Mota - Belenzinho, São Paulo - SP, 03062-030</p>
+                            <p><span>Ecoponto Berrini</span> <br> Praça do Cancioneiro, 15 - Cidade Monções, São Paulo - SP, 04548-060</p>
+                            <p><span>Ecoponto Brás</span> <br> R. Palmorino Mônaco - Mooca, São Paulo - SP, 03103-002</p>
+                            <p><span>Ecoponto Bresser</span> <br> Praça Giuseppe Cesari, 54 - Brás, São Paulo - SP, 03053-020</p>
+                            <p><span>Ecoponto Cambuci</span> <br> Av. Dom Pedro I, 4900 - Vila Monumento, São Paulo - SP, 01515-000</p>
+                            <p><span>Ecoponto Cangaíba</span> <br> Cangaiba, São Paulo - SP</p>
+                            <p><span>Ecoponto Carlito Maia</span> <br> R. Domingos Fernandes Nobre, 216 - Vila Itaim, São Paulo - SP, 08190-300</p>
+                            <p><span>Ecoponto Cidade Lider</span> <br> R. Charles Manguin, 2-20 - Jardim Marília, São Paulo - SP, 03579-150</p>
+                            <p><span>Ecoponto Cidade Saudável</span> <br> R. Ptolomeu, 869 - Vila Socorro, São Paulo - SP, 04762-040</p>
+                            <p><span>Ecoponto Cipoaba</span> <br> R. Padre Luís de Siqueira - Jardim Rodolfo Pirani, São Paulo - SP, 08310-190</p>
+                            <p><span>Ecoponto Cohab Artur Alvim</span> <br> Av. Padre Estanislau de Campos, 44 - Conj. Hab. Padre Manoel da Nobrega, São Paulo - SP, 03590-060</p>
+                            <p><span>Ecoponto Cônego José Salomon</span> <br> Av. Cônego José Salomon, 861 - Vila Portugal, São Paulo - SP, 02918-170</p>
+                            <p><span>Ecoponto Corinthians</span> <br> R. Ana Perena, 91-101 - Jardim Bonifacio, São Paulo - SP, 08253-230</p>
+                            <p><span>Ecoponto Cupecê</span> <br> R. Anália Maria de Jesus, 131 - Jardim Itacolomi, São Paulo - SP, 04385-090</p>
+                            <p><span>Ecoponto Flamingo</span> <br> R. Alexandre Dias Nogueira, 353 - Vila Nova Curuca, São Paulo - SP, 08031-240</p>
+                            <p><span>Ecoponto Freguesia do Ó</span> <br> R. Souza Filho, 690 - Vila Arcadia, São Paulo - SP, 02911-040</p>
+                            <p><span>Ecoponto Gamelinha</span> <br> R. Morfeu, 25 - Vila Nhocuné, São Paulo - SP, 03563-295</p>
+                            <p><span>Ecoponto General Flores</span> <br> R. Javaés, 70 - Bom Retiro, São Paulo - SP, 01130-010</p>
+                            <p><span>Ecoponto Giovanni Gronchi</span> <br> Av. Giovanni Gronchi, 3413 - Morumbi, São Paulo - SP, 05651-002</p>
+                            <p><span>Ecoponto Guaianases</span> <br> R. da Passagem Funda, 250 - Centro Histórico de São Paulo, São Paulo - SP, 08411-010</p>
+                            <p><span>Ecoponto Iguatemi</span> <br> Parque Boa Esperança, São Paulo - SP, 08341-235</p>
+                            <p><span>Ecoponto Imperador</span> <br> Av. Ribeirão Jacu, 201 - Jardim Santana, São Paulo - SP, 08050-42</p>
+                            <p><span>Ecoponto Itaqueruna</span> <br> Rua Domitilia d'Abril - Cidade Nova São Miguel, São Paulo - SP, 08042-550</p>
+                            <p><span>Ecoponto Jabaquara</span> <br> Rua Jupatis, 140 - Vila Mira, São Paulo - SP, 01218-012</p>
+                            <p><span>Ecoponto Jardim Jaqueline</span> <br> Jardim Raposo Tavares, São Paulo - SP</p>
+                            <p><span>Ecoponto Jardim Lageado</span> <br> R. Isabela, 421 - Lajeado, São Paulo - SP, 08440-520</p>
+                            <p><span>Ecoponto Jardim Romano</span> <br> R. Duarte Martins Mourão, 307 - Jardim Santa Margarida, São Paulo - SP, 08191-250</p>
+                            <p><span>Ecoponto Jardim Santa Fé</span> <br> R. Salvador Albano - Jardim Santa Fé, São Paulo - SP, 05271-090</p>
+                            <p><span>Ecoponto Jardim São Nicolau</span> <br> R. Agreste de Itabaiana, 590 - Jardim Artur Alvim, São Paulo - SP, 03685-110</p>
+                            <p><span>Ecoponto Jd. Helena</span> <br> R. Cosme dos Santos, 213 - Jardim Sao Martinho, São Paulo - SP, 08090-753</p>
+                            <p><span>Ecoponto Jd. Lapenna</span> <br> R. Rafael Zimbardi, 49 - Jardim Nair, São Paulo - SP, 08071-130</p>
+                            <p><span>Ecoponto Liberdade</span> <br> Rua Jaceguai, 67 - Liberdade, São Paulo - SP, 01315-010</p>
+                            <p><span>Ecoponto Lima Bonfante</span> <br> R. Capitão-mor Lázaro da Costa, 324 - Jardim Sao Francisco, São Paulo - SP, 08390-260</p>
+                            <p><span>Ecoponto Mãe Preta</span> <br> Av. Dama Entre Verdes, 26-2 - Jardim dos Ipes, São Paulo - SP</p>
+                            <p><span>Ecoponto Mirandópolis</span> <br> Av. Senador Casemiro da Rocha, 1220 - Mirandópolis, São Paulo - SP, 04057-000</p>
+                            <p><span>Ecoponto Montalvania</span> <br> R. Montalvânia, 195 - Jardim Sao Cristovao, São Paulo - SP, 03930-095</p>
+                            <p><span>Ecoponto Mooca</span> <br> Av. Pires do Rio, 600 - Belém, 03160-010</p>
+                            <p><span>Ecoponto Moreira</span> <br> Rua João Batista de Godoy, 1164 - Jardim Meliunas, São Paulo - SP, 08111-390</p>
+                            <p><span>Ecoponto Nascer do Sol</span> <br> Rua Nascer do Sol, 356 - Conj. Hab. Santa Etelvina II, São Paulo - SP, 08485-290</p>
+                            <p><span>Ecoponto Nova York</span> <br> R. Acácio Antunes, 89 - Jardim das Rosas (Zona Leste I), São Paulo - SP, 03909-010</p>
+                            <p><span>Ecoponto Olinda</span> <br> R. Nelsom Brissac, 1235 - Parque Regina, São Paulo - SP, 05778-180</p>
+                            <p><span>Ecoponto Osvaldo Valle de Cordeiro</span> <br> Av. Osvaldo Valle Cordeiro, S/N - Cidade Líder, São Paulo - SP, 03584-000</p>
+                            <p><span>Ecoponto Padre Nildo do Amaral</span> <br> R. Montes Claros, 303 - Jardim Dona Deolinda, São Paulo - SP, 08430-005</p>
+                            <p><span>Ecoponto Paraisópolis</span> <br> R. Irapará, 73 - Paraíso do Morumbi, São Paulo - SP, 05706-300</p>
+                            <p><span>Ecoponto Pari</span> <br> Av. Carlos de Campos, 1031 - Pari, São Paulo - SP, 03028-001</p>
+                            <p><span>Ecoponto Parque Boturussu</span> <br> R. Nélio Batista Guimarães, 174 - Parque Boturussu, São Paulo - SP, 03802-005</p>
+                            <p><span>Ecoponto Parque do Carmo</span> <br> R. Machado Nunes, 102 - Jardim Nossa Sra. do Carmo, São Paulo - SP, 08275-310</p>
+                            <p><span>Ecoponto Parque Fernanda</span> <br> Av. Dr. Salvador Rocco, 400 - Parque Fernanda, São Paulo - SP, 05889-230</p>
+                            <p><span>Ecoponto Parque Guarani</span> <br> R. Manuel Alves da Rocha, 584 - Parque Guarani, São Paulo - SP, 08235-730</p>
+                            <p><span>Ecoponto Parque Peruche</span> <br> Av. Eng. Caetano Álvares, 3142 - Parque Peruche, São Paulo - SP, 02546-000</p>
+                            <p><span>Ecoponto Pedro Nunes</span> <br> R. Varzelândia, 100 - Jardim Pedro José Nunes, São Paulo - SP, 08061-320</p>
+                            <p><span>Ecoponto Pesqueiro</span> <br> R. Caiuás - Jardim Camargo Novo, São Paulo - SP, 08120-525</p>
+                            <p><span>Ecoponto Penha I</span> <br> R. Dr. Heládio, 104 - Penha de França, São Paulo - SP, 03650-020</p>
+                            <p><span>Ecoponto Piraporinha</span> <br> R. João de Abreu, 326 - Jardim das Flores, São Paulo - SP, 04905-020</p>
+                            <p><span>Ecoponto Politécnica</span> <br> Rua Paulino Baptista Conti - Vila Antonio, São Paulo - SP, 05382-140</p>
+                            <p><span>Ecoponto Recanto dos Humildes</span> <br> R. Salles Gomes, 415 - Perus, São Paulo - SP, 05208-110</p>
+                            <p><span>Ecoponto Saioá</span> <br> Rua Professor Oswaldo Lacerda Gomes Cardim - Chácara Klabin, São Paulo - SP, 04116-120</p>
+                            <p><span>Ecoponto Santana</span> <br> Av. Zaki Narchi, 391 - Carandiru, São Paulo - SP, 02029-000</p>
+                            <p><span>Ecoponto Santa Cruz</span> <br> R. Santa Cruz, 1452 - Vila Mariana, São Paulo - SP, 04122-001</p>
+                            <p><span>Ecoponto Santo Dias</span> <br> Travessa Rosifloras, 301 - Conj. Hab. Instituto Adventista, São Paulo - SP, 05868-600</p>
+                            <p><span>Ecoponto São Leandro</span> <br> R. Antônio Rates, 1 - Vila Palmeiras, São Paulo - SP, 02725-030</p>
+                            <p><span>Ecoponto São Lucas</span> <br> R. Florêncio Sanches, 307 - Vila Prudente, São Paulo - SP, 03266-200</p>
+                            <p><span>Ecoponto Sapopemba</span> <br> R. Francesco Usper, 550 - Conj. Promorar Sapopemba, São Paulo - SP, 03927-310</p>
+                            <p><span>Ecoponto Setor G</span> <br> R. Alfonso Asturaro, 733 - Conj. Hab. Barro Branco II, São Paulo - SP, 08473-591</p>
+                            <p><span>Ecoponto Tatuapé</span> <br> Av. Salim Farah Maluf, 179 - Tatuapé, São Paulo - SP</p>
+                            <p><span>Ecoponto Tereza Cristina</span> <br> Av. Teresa Cristina, 10 - Ipiranga, São Paulo - SP, 01552-020</p>
+                            <p><span>Ecoponto Tiquatira</span> <br> Av. Governador Carvalho Pinto, s/n - Jardim Mariana, São Paulo - SP, 03730-040</p>
+                            <p><span>Ecoponto Tucuruvi</span> <br> R. Eduardo Vicente Nasser, 519 - Jardim Leonor Mendes de Barros, São Paulo - SP, 02345-000</p>
+                            <p><span>Ecoponto Viaduto Antártica</span> <br> Rua Robert Bosch, 242 - Parque Industrial Tomas Edson, São Paulo - SP, 05003-020</p>
+                            <p><span>Ecoponto Viaduto Engº Alberto Badra</span> <br> Avenida Aricanduva, 200 - Vila California, São Paulo - SP, 03501-010</p>
+                            <p><span>Ecoponto Vicente Rao</span> <br> Av. Professor Vicente Rao, 308 - Santo Amaro, São Paulo - SP, 04636-001</p>
+                            <p><span>Ecoponto Vigário Godói</span> <br> R. Vig. Godói, 480 - Vila Zat, São Paulo - SP, 02976-080</p>
+                            <p><span>Ecoponto Vila das Belezas</span> <br> R. Campo Novo do Sul, 500 - Vila Andrade, São Paulo - SP, 05729-100</p>
+                            <p><span>Ecoponto Vila das Mercês</span> <br> R. Italva, 86 - Vila Moraes, São Paulo - SP, 04160-005</p>
+                            <p><span>Ecoponto Vila Cardoso Franco</span> <br> Rua dos Vorás, 25 - Vila Cardoso Franco, São Paulo - SP, 03978-310</p>
+                            <p><span>Ecoponto Vila Dalila</span> <br> Avenida Aricanduva, 4391 - Vila Dalila, São Paulo - SP, 03527-000</p>
+                            <p><span>Ecoponto Vila Guilherme</span> <br> Rua José Bernardo Pinto, 1480 - Vila Guilherme, São Paulo - SP, 02055-001</p>
+                            <p><span>Ecoponto Vila Jaguará</span> <br> R. Agrestina, 189 - Jaguará, São Paulo - SP, 05117-100</p>
+                            <p><span>Ecoponto Vila Luisa</span> <br> R. Manoel Graça - Guaiauna, São Paulo - SP, 03631-120</p>
+                            <p><span>Ecoponto Vila Madalena</span> <br> R. Girassol, 21 - Vila Madalena, São Paulo - SP, 05433-000</p>
+                            <p><span>Ecoponto Vila Maria</span> <br> R. Curuçá, 1700 - Vila Maria, São Paulo - SP, 02168-150</p>
+                            <p><span>Ecoponto Maria do Carmo</span> <br> R. Caminho do Engenho, 800 - Ferreira, São Paulo - SP, 05524-000</p>
+                            <p><span>Ecoponto Vila Mariana</span> <br> R. Maurício Francisco Klabin, 37 - Vila Mariana, São Paulo - SP, 04120-020</p>
+                            <p><span>Ecoponto Vila Matilde</span> <br> R. Mateus de Siqueira - Cidade Patriarca, São Paulo - SP, 03556-020</p>
+                            <p><span>Ecoponto Vila Nova Cachoeirinha</span> <br> Rua Felix Alves Pereira, 113 - Vila Nova Cachoeirinha, São Paulo - SP, 02882-030</p>
+                            <p><span>Ecoponto Vila Rica</span> <br> R. Jorge Mamede da Silva, 200 - Vila Rica, São Paulo - SP, 02860-120</p>
+                            <p><span>Ecoponto Vila Sabrina</span> <br> Av. do Poeta, 931 - Jardim Julieta, São Paulo - SP, 02162-100</p>
+                            <p><span>Ecoponto Vila Santa Maria</span> <br> R. André Bolsena - Vila Santista, São Paulo - SP, 02560-220</p>
+                            <p><span>Ecoponto Vila Talarico</span> <br> Av. Dr. Bernardino Brito Fonseca de Carvalho, 1050 - Vila Talarico, São Paulo - SP</p>
+                            <p><span>Ecoponto Voith</span> <br> Av. Atílio Brugnoli, 489 - Jardim Sao Joao (Jaragua), São Paulo - SP, 02996-010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- rodapé -->
+    <footer>
+        <div id="logo">
+          <img src="../img/logo.png" alt="">
+        </div>
+        <div id="contato">
+          <h2>Contato</h2>
+          <p>educaeco@outlook.com</p>
+          <p>Senac Lapa Tito - Rua Tito -</p>
+          <p>Vila Romana, São Paulo - SP</p>
+        </div>
+        <div id="redesocial">
+            <h2>Redes sociais</h2>
+            <a href="https://www.facebook.com/groups/229435899000158" target="blank"><img src="../img/facebook.svg" alt="logo do facebook"></a>
+            <a href="https://www.instagram.com/educaecologia/" target="blank"><img src="../img/instagram.svg" alt="logo do instagram"></a>
+        </div>
+        <div id="creditos">
+            <h2>Creditos sobre imagens</h2>
+            <div>- Ícones feitos por <a href="https://www.freepik.com" title="Freepik" target="blank">Freepik</a> do <a href="https://www.flaticon.com/br/" title="Flaticon" target="blank">www.flaticon.com</a></div>
+            <div>- Work illustrations by <a href="https://storyset.com/work" target="blank">Storyset</a></div>
+        </div>
+        
+      </footer>
+      <div id="direitos">
+        <p><strong>© Copyright 2021 - todos os direitos reservados a EducaEco</strong> </p>
+      </div>
+
+    <!-- mapbox -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+        <script>
+
+    // window.onclick
+
+    // menu
+    function abrir() {
+        var hamburguer = document.getElementById('hamburguer');
+        if (window.getComputedStyle(hamburguer).display === 'none') {
+            hamburguer.style.display = 'block';
+        } else {
+            hamburguer.style.display = 'none';
+        }
+    }
+
+    // mapa
+    mapboxgl.accessToken =
+            'pk.eyJ1Ijoia2FyaW5heWkxIiwiYSI6ImNrcHk1bmh4cjAyaTYydnBhbzNwMDg3bG8ifQ.uAZA9cBbpdwWNSNgdPX5eA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/karinayi1/ckqkerupb24wn18mt7uwaxmaf',
+            center: [-46.63998322438588, -23.55418790802442],
+            zoom: 10.7
+        });
+
+        // ação após de clicar nos pontos
+        map.on('click', function (e) {
+            var features = map.queryRenderedFeatures(e.point, {
+                layers: ['ecopontos'] 
+            });
+            if (!features.length) {
+                return;
+            }
+            var feature = features[0];
+
+            // aparece o título e a descrição
+            var popup = new mapboxgl.Popup({ offset: [0, -15] })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(
+                    '<h3>' + feature.properties.title + '</h3>' +
+                    '<p>' + feature.properties.description + '</p>'
+                )
+                .addTo(map);
+        });
+
+        var geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            marker : false,
+            mapboxgl: mapboxgl,
+            bbox: [-46.82963522605044, -24.013134229494142, -46.37185613023797, -23.304536208310935]
+        });
+
+        map.addControl(geocoder);
+    </script>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

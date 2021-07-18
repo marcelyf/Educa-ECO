@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angela Filipini, Caio Moreira, Giovana Santana, Karina Izo, Marcely Francisco, Murilo Vitale, Victor Frohlich e Wendrio Vale">
+    <meta nome="keywords" content="Simulador, Calculo do consumo de água, Consumo de água, Água">
+    <meta nome="description" content="Simulador que calcula o consumo de água">
+    <meta nome="robots" content="index, follow">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/simulador.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>Educa ECO</title>
+</head>
+<body>
+    <!-- cabeçalho -->
+    <div id="header">
+        <a id="logo1" href="../index.html"><img src="../img/logo.png" alt="">Educa Eco</a>
+        <div id="nav">
+          <button aria-label="Abrir Menu" id="btn" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/simulador.html">Calcule seu consumo de água</a></li>
+            <li><a href="../html/ecopontos.html">Locais de descarte</a></li>
+            <li><a href="../html/artigos_principal.html">Artigos</a></li>
+            <li><a href="../html/desafio.html">Desafios</a></li>
+            <li><a href="../html/ong.html">Ongs</a></li>
+            <a href="html/login.html"><button id="responsivobotao">Entrar</button></a>
+          </ul>
+          <a href="../html/login.html"><button class="botao">Entrar</button></a>
+        </div>
+          </div>
+    <!-- faixa -->
+    <div id="faixaint">
+        <div id="faixa-espaco">
+            <img src="../img/simulador-rafiki.png" alt="4 passos para descobrir o consumo de água mensal">
+            <section id="faixa">
+                <h1>SIMULADOR DE CONSUMO</h1>
+                <h2>Descubra a quantidade de água que costuma gastar durante um mês e o valor proporcional a este gasto, além de conferir se está dentro ou ultrapassando o recomendado pela ONU</h2>
+                <h3 id="paragrafo">* Cálculo realizado com base na tabela de valores da Sabesp referente ao município de São Paulo, o resultado pode oscilar</h3>
+            </section>
+        </div>
+    </div>
+    <!-- simulador -->
+    <main>
+        <!-- enunciado do simulador -->
+        <h4>Em cada uma das ações a seguir, insira a quantidade de vezes que você as executa em uma semana (7 dias)</h4> 
+        <form>   
+            <div id="formulario">
+                <div class="container" id="fileiras"> <!--container 0-->
+                    <p></p>
+                    <div class="lab" id="temp">Tempo</div>
+                    <div class="lab" id="volu">Volume</div>
+                    <div class="lab" id="val">Valor</div>
+                </div>
+                <div class="container"> <!--container 1-->
+                    <img src="../img/brushing.png" alt="Escovar os dentes"/>
+                    <div class="lab">
+                        <input id="sem1" class="num" type="number" min="0"/> <!--num 0-->
+                        <input id="sem11" class="num" type="number" min="0"/> <!--num 1-->
+                        <input id="txt11" class="txtstyle" type="text" disabled/> <!--txtstyle 0-->
+                        <label for="sem1">vez(es)</label>
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt21" class="txtstyle" disabled/> <!--txtstyle 1-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt31" class="txtstyle" disabled/> <!--txtstyle 2-->
+                    </div>
+                </div>
+                <div class="container" id="privada"> <!--container 2-->
+                    <img src="../img/toilet.png" alt="Privada"/>
+                    <div class="lab">
+                        <input id="sem2"class="num" type="number" min="0"/> <!--num 2-->
+                        <input id="txt12" class="txtstyle" type="text" disabled/> <!--txtstyle 3-->
+                        <label for="sem2">vez(es)</label>
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt22" class="txtstyle" disabled/> <!--txtstyle 4-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt32" class="txtstyle" disabled/> <!--txtstyle 5-->
+                    </div>
+                </div>
+                <div class="container"> <!--container 3-->
+                    <img src="../img/shower.png" alt="Chuveiro"/>
+                    <div class="lab">
+                        <input id="sem3" class="num" type="number" min="0"/> <!--num 3-->
+                        <input id="sem33" class="num" type="number" min="0"/> <!--num 4-->
+                        <input id="txt13" class="txtstyle" type="text" disabled/> <!--txtstyle 6-->
+                        <label for="sem3">vez(es)</label>
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt23" class="txtstyle" disabled/> <!--txtstyle 7-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt33" class="txtstyle" disabled/> <!--txtstyle 8-->
+                    </div>
+                </div>
+                <div class="container" id="maquina"> <!--container 4-->
+                    <img src="../img/washing-machine.png" alt="Máquina de lavar roupas"/>
+                    <div class="lab">
+                        <input id="sem4" class="num" type="number" min="0"/> <!--num 5-->
+                        <input id="txt14" class="txtstyle" type="text" disabled/> <!--txtstyle 9-->
+                        <label for="sem4">vez(es)</label>
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt24" class="txtstyle" disabled/> <!--txtstyle 10-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt34" class="txtstyle" disabled/> <!--txtstyle 11-->
+                    </div>
+                </div>
+                <div class="container"> <!--container 5-->
+                    <img src="../img/dish-washing.png" alt="Lavar louça"/>
+                    <div class="lab">
+                        <input id="sem5" class="num" type="number" min="0"/> <!--num 6-->
+                        <input id="sem55" class="num" type="number" min="0"/> <!--num 7-->
+                        <input id="txt15" class="txtstyle" type="text" disabled/> <!--txtstyle 12-->
+                        <label for="sem5">vez(es)</label>
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt25" class="txtstyle" disabled/> <!--txtstyle 13-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt35" class="txtstyle" disabled/> <!--txtstyle 14-->
+                    </div>
+                </div>
+                <div class="container" id="categorias"> <!--container 6-->
+                    <div class="lab">
+                        <input type="radio" name="residencial" id="radio1" value="comum">
+                        <label for="radio1" class="labres">Residencial Comum</label>
+                    </div>
+                    <div class="lab">
+                        <input type="radio" name="residencial" id="radio2" value="social">
+                        <label for="radio2" class="labres">Residencial Social</label>
+                    </div>
+                    <div class="lab">
+                        <input type="radio" name="residencial" id="radio3" value="vulneravel">
+                        <label for="radio3" class="labres">Residencial Vulnerável</label>
+                    </div>
+                </div>
+                <div class="container"> <!--container 7-->
+                    <p id="total">Total</p>
+                    <div class="lab">
+                        <input type="text" id="txt16" class="txtstyle" disabled/> <!--txtstyle 15-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt26" class="txtstyle" disabled/> <!--txtstyle 16-->
+                    </div>
+                    <div class="lab">
+                        <input type="text" id="txt36" class="txtstyle" disabled/> <!--txtstyle 17-->
+                    </div>
+                </div>
+            </div>
+            <!-- botões do simulador -->
+            <div id="botao">
+                <input id="avan" class="zoom" type="button" value="Avançar" onclick="avancar()"/>
+                <input id="avan1" class="zoom" type="button" value="Avançar" onclick="avancar1()"/>
+                <input id="calc" class="zoom" type="button" value="Calcular" onclick="calcular()"/>
+                <input id="refa" class="zoom" type="button" value="Refazer cálculo" onclick="refazer()"/>
+            </div>
+        </form>
+    </main>
+    <!-- Modal -->
+    <div class="modalint">
+        <div class="modal">    
+            <!-- maior que 3300 litros de consumo -->
+            <div id="onu-dentro">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Parabéns! O planeta agradece  :)</h2>
+                </div>
+                <div id="modal-body-check">
+                    <img class="checkx" src="../img/check.png" alt="Check">
+                    <p>Você está dentro do consumo de água recomendado <br> pela ONU de 3300 litros mensais por pessoa</p>
+                </div>
+                <div class="modal-body">
+                    <p>Continue assim e  ajude a melhorar ainda mais a sua qualidade <br> de vida e daqueles que ama. </p>
+                    <div class="align-click">
+                        <a href="../html/artigos2.html" target="blank">Confira dicas sobre como economizar água clicando aqui</a>
+                        <img class="click" src="../img/click.png" alt="Click">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>* Caso você resida no Município de São Paulo, multiplique o valor total, em reais, por 2 para adicionar a tarifa de esgoto e chegar a um preço aproximado da fatura do mês</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalint">
+        <div class="modal">
+            <!-- menor ou igual a 3300 litros de consumo -->
+            <div id="onu-ultrapassou">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Repense seus hábitos de consumo</h2>
+                </div>
+                <div id="modal-body-x">
+                    <img class="checkx" src="../img/x.png" alt="Check">
+                    <p>Você ultrapassou o consumo de água recomendado <br> pela ONU de 3300 litros mensais por pessoa  :(</p>
+                </div>
+                <div class="modal-body">
+                    <p>Para garantir uma boa qualidade de vida para você e a todos que ama, <br> ajude a preservar esse recurso natural  tão importante</p>
+                    <div class="align-click">    
+                        <a href="../html/artigos2.html" target="blank">Clique aqui para conferir dicas sobre como economizar água</a>
+                        <img class="click" src="../img/click.png" alt="Click">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>* Caso você resida no Município de São Paulo, multiplique o valor total, em reais, por 2 para adicionar a tarifa de esgoto e chegar a um preço aproximado da fatura do mês</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rodapé -->
+    <footer>
+        <div id="logo">
+            <img src="../img/logo.png" alt="">
+        </div>
+        <div id="contato">
+            <h2>Contato</h2>
+            <p>educaeco@outlook.com</p>
+            <p>Senac Lapa Tito - Rua Tito -</p>
+            <p>Vila Romana, São Paulo - SP</p>
+        </div>
+        <div id="redesocial">
+            <h2>Redes sociais</h2>
+            <a href="https://www.facebook.com/groups/229435899000158" target="blank"><img src="../img/facebook.svg" alt="logo do facebook"></a>
+            <a href="https://www.instagram.com/educaecologia/" target="blank"><img src="../img/instagram.svg" alt="logo do instagram"></a>
+        </div>
+        <div id="creditos">
+            <h2>Creditos sobre imagens</h2>
+            <div>- Ícones feitos por <a href="https://www.freepik.com" title="Freepik" target="blank">Freepik</a> do <a href="https://www.flaticon.com/br/" title="Flaticon" target="blank">www.flaticon.com</a></div>
+            <div>- Work illustrations by <a href="https://storyset.com/work" target="blank">Storyset</a></div>
+        </div>    
+       </footer>
+        <div id="direitos">
+            <p>© Copyright 2021 - todos os direitos reservados a EducaEco</p>
+        </div>
+        
+    <script src="../js/simulador.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
