@@ -1,0 +1,723 @@
+/* toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* corpo da página */
+body {
+    background-color: #F9DC5C;
+    font-family: 'Itim', cursive;
+}
+
+/* faixa */
+div#faixaint {
+    display: flex;
+    justify-content: center;
+    padding-top: 114px;
+    align-items: center;
+    background-color: #DFB2FA;
+}
+    div#faixaint img{
+        height: auto;
+        width: 36%;
+    }
+    #faixa-espaco {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        animation-duration: 1.5s;
+        animation-name: slide1;
+    }
+    section#faixa {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    h1 {
+        font-size: 4.4vw;
+        padding-bottom: 20px;
+    }
+    h1 + h2 {
+        font-size: 1.8vw;
+        padding-bottom: 20px;
+        color: #000000bd;
+        line-height: 28px;
+    }
+    h3 {
+        font-size: 1.3vw;
+        color: #000000bd;
+    }
+
+/* simulador */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h4 {
+    font-size: 25px;
+    margin-top: 42px;
+    font-weight: normal;
+    text-align: center;
+    animation-duration: 0.8s;
+    animation-name: slide1;
+    width: 85%;
+}
+    div#formulario{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        animation-duration: 0.8s;
+        animation-name: slide1;
+    }
+    div.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px -10px -40px 10px;
+    }
+    div.lab {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    /* palavra que aparece após clicar no botão "Calcular" */
+    div#volu {
+        padding: 15px 0;
+    }
+
+    /* imagens do formulário */
+    div.container img {
+        width: 176px;
+        height: 176px;
+        padding: 40px;
+        margin-bottom: -25px;
+    }
+
+    /* inputs para inserir os valores */
+    input.num {
+        height: 40px;
+	    width: 75px;
+        border-radius: 2em;
+        border: 0;
+        background-color: white;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Itim', cursive;
+    }
+    input.txtstyle {
+        height: 40px;
+	    width:110px;
+        border-radius: 2em;
+        border: 0;
+        background-color: white;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Itim', cursive;
+    }
+    input#sem11, #sem22, #sem33, #sem44, #sem55 {
+        margin-right: 30px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+    /* inputs ou palavras que aparecem após clicar no botão "Avançar" ou 
+    após clicar no botão "Calcular" ou*/
+    input#txt11, #txt12, #txt13, #txt14, #txt15,
+    #sem11, #sem33, #sem55 {
+        display: none;
+        position: absolute;
+    }
+    input#txt21, #txt22, #txt23, #txt24, #txt25,
+    #txt31, #txt32, #txt33, #txt34, #txt35,
+    #txt16, #txt26, #txt36,
+    input#calc, #avan1,
+    div#temp, #volu, #val  {
+        display: none;
+    }
+    div.container p {
+        height: 176px;
+        width: 176px;
+        line-height: 176px;
+        font-size: 25px;
+        display: none;
+        justify-content: center;
+        margin-bottom: -25px;
+    }
+    div#val, input#txt31, #txt32, #txt33, 
+    #txt34, #txt35, #txt36 {
+        margin-bottom: 60px;
+    }
+    div#categorias {
+        display: none;
+        margin-bottom: 50px;
+    }
+    /* botões radio */
+    input[type="radio"] {
+        display: none;
+    }
+        label.labres {
+            font-size: 22px;
+            border-radius: 2em;
+            display: flex;
+            align-items: center;
+            background-color: white;
+        } 
+        label.labres:hover {
+            border: 1.5px solid black;
+            transition: 0.3s;
+        }
+        label[for="radio1"].labres, label[for="radio2"].labres {
+            padding: 10px 60px 10px 40px;
+        }
+        label[for="radio3"].labres {
+            padding: 10px 50px 10px 30px;
+        }
+        /* campo do check */
+        label.labres::before {
+            content:"";
+            height: 25px;
+            width: 25px; 
+            border-radius: 2em;
+            margin-right: 20px;
+            background-color: #F9DC5C;
+        }
+        label[for="radio2"].labres::before {
+            margin-right: 40px;
+        }
+        /* quando o campo é selecionado (label) */
+        input[type="radio"]:checked + label.labres {
+            border: 1.5px solid black;
+        }
+        /* quando o campo é selecionado (campo do check) */
+        input[type="radio"]:checked + label.labres::before {
+            background-color: white;
+            height: 18px;
+            width: 18px;
+            border: 8px solid #F9DC5C;
+        }
+
+    /* botões do simulador e suas animações */
+    div#botao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    input#avan {
+        display: block;
+    }
+    input#refa {
+        width: 170px;
+        display: none;
+    }
+    input.zoom {
+        background-color: #36E146;
+        height: 40px;
+	    width: 120px;
+        font-size: 20px;
+        border-radius: 2em;
+        border: 0;
+        transition: transform 0.1s;
+        cursor: pointer;
+        box-shadow: 0 5px 0 #2fc23d;
+        transition: all 0.1s linear;
+        font-family: 'Itim', cursive;
+    }
+    /* aumenta o botão */
+    input.zoom:hover {
+        transform: scale(1.1);
+    }
+    /* afunda o botão */
+    input.zoom:active {
+        box-shadow: 0 2px 0 #2fc23d;
+        transform: translateY(3px);
+    }
+
+/* modal */
+.modalint {
+    position: fixed;
+    background-color: rgba(0,0,0,0.4); 
+    z-index: 999;
+    padding-top: 100px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
+    .modal {
+        width: 50%;
+        animation-name: modal-efeito;
+        animation-duration: 0.6s;
+        background-color: white;
+        margin: 0 auto;
+        border-radius: 2em;
+        overflow: hidden;
+    }
+
+    #onu-dentro, #onu-ultrapassou {
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.397);
+        border-radius: 2em;
+    }
+
+    .modal-header {
+        padding: 20px 16px;
+        font-family: 'Itim', cursive;
+        font-size: 20px;
+        text-align: center;
+        color: black;
+    }
+    .close {
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 40px;
+        float: right;
+        color: #000000d5;
+        transition: transform 0.1s;
+        margin-top: -10px;
+    }
+    .close:hover {
+        color: black;
+        transform: scale(1.1);
+    }
+
+    .checkx {
+        width: 46px;
+        height: 46px;
+        margin-right: 20px;
+    }
+    #modal-body-check {
+        display: flex;
+        background-color: #B4FF63;
+        width: 100%;
+        padding: 20px 16px;
+        font-family: 'Nunito', sans-serif;
+        color: #000000d5;
+        font-size: 18px;
+        justify-content: center;
+    }
+    #modal-body-x {
+        display: flex;
+        background-color: #FD8251;
+        width: 100%;
+        padding: 20px 16px;
+        font-family: 'Nunito', sans-serif;
+        color: #000000d5;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 16px;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #000000d5;
+        font-size: 16px;
+    }
+    .align-click a {
+        color: #000000d5;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: 'Itim', cursive;
+        transition: transform 0.1s;
+        margin-top: 10px;
+    }
+    .align-click a:hover {
+        color: black;
+        transform: scale(1.02);
+        text-decoration: underline;
+    }
+    .click {
+        width: 30px;
+        height: 30px;
+        transform: rotate(-30deg);
+        margin-left: 8px;
+    }
+    .align-click {
+        display: flex;
+        align-items: center;
+    }
+
+    .modal-footer {
+        background-color: #6CCCEC;
+        padding: 20px 16px;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #000000d5;
+        font-size: 13px;
+        border-radius: 0 0 2em 2em;
+    }
+
+/* @ */
+/* @keyframes (movimentação do simulador) */
+@keyframes slide1 {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+      }
+}
+    @keyframes slide2 {
+        from {
+            margin-left: -500px;
+            opacity: 0%;
+        }
+        to {
+            margin-left: 0 auto;
+            opacity: 100%;
+        }
+    }
+    @keyframes slide3 {
+        from {
+            margin-left: -500px;
+            opacity: 0%;
+        }
+        to {
+            margin-left: 0 auto;
+            opacity: 100%;
+        }
+    }
+    @keyframes slide4 {
+        from {
+            margin-left: -500px;
+            opacity: 0%;
+        }
+        to {
+            margin-left: 0 auto;
+            opacity: 100%;
+        }
+    }
+    @keyframes modal-efeito {
+        from {
+            margin-top: -300px; 
+            opacity:0
+        }
+        to {
+            margin-top: 0 auto; 
+            opacity:1
+        }
+    }
+
+/* @media (responsivo)*/
+@media screen and (min-width: 1300px) {
+    #faixa-espaco {
+        width: 90.1%;
+    }
+    h1 {
+        font-size: 4.5vw;
+    }
+    h1 + h2 {
+        font-size: 1.9vw;
+        line-height: 33px;
+    }
+    h3#paragrafo {
+        font-size: 1.4vw;
+    }
+
+    h4 {
+        font-size: 30px;
+        width: 89%;
+    }
+    .container div.lab {
+        font-size: 30px;
+    }
+    div.container img {
+        width: 196px;
+        height: 196px;
+    }
+    input.num {
+        height: 48px;
+        width: 80px;
+        font-size: 26px;
+    }
+    label {
+        font-size: 26px;
+    }
+    input#sem11, #sem22, #sem33, #sem44, #sem55 {
+        margin-right: 44px;
+    }
+
+    label.labres {
+        font-size: 26px;
+        padding: 15px 50px 15px 30px;
+    } 
+    label.labres::before {
+        height: 30px;
+        width: 30px; 
+    }
+    input[type="radio"]:checked + label.labres::before {
+        height: 23px;
+        width: 23px;
+    }
+
+    div.container p {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    input.txtstyle {
+        height: 48px;
+        width:140px;
+        font-size: 26px;
+    }
+    input.zoom {
+        height: 53px;
+        width: 140px;
+        font-size: 28px;
+        box-shadow: 0 7px 0 #2fc23d;
+    }
+    input.zoom:active {
+        box-shadow: 0 3px 0 #2fc23d;
+        transform: translateY(4px);
+    }
+    input#refa {
+        height: 55px;
+        width: 215px;
+    }
+
+    .modal {
+        width: 60%;
+    }
+    .modal-header {
+        font-size: 26px;
+    }
+    .close {
+        font-size: 60px;
+    }
+    .checkx {
+        width: 56px;
+        height: 56px;
+    }
+    #modal-body-check {
+        font-size: 23px;
+    }
+    #modal-body-x {
+        font-size: 23px;
+    }
+    .modal-body {
+        font-size: 20px;
+    }
+    .align-click a {
+        font-size: 20px;
+    }
+    .click {
+        width: 40px;
+        height: 40px;
+    }
+    .modal-footer {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1096px){
+    nav{
+        margin-right: 60px;
+    }
+
+    #faixa-espaco {
+        width: 85%;
+    }
+    div#faixaint img{
+        width: 51%;
+        height: auto;
+    }
+    section#faixa {
+        width: 46%;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    h1 + h2 {
+        font-size: 2vw;
+        line-height: 26px;
+    }
+    h3#paragrafo {
+        font-size: 1.6vw;
+    }
+
+    h4 {
+        width: 85%;
+    }
+    div#fileiras {
+        display: none;
+    }
+    p#total {
+        height: 160px;
+        margin-top: -40px;
+    }
+    input#refa {
+        margin: 0 -10px 0 10px;
+    }
+    p#total {
+        height: 176px;
+        margin-top: 0;
+    }
+
+    .modal {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1055px){
+    p#total {
+        height: 160px;
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .modal {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    p#total {
+        height: 176px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#faixa {
+        width: 46%;
+    }
+    div#faixaint img {
+        width: 50%;
+    }
+
+    h1 + h2 {
+        line-height: 20px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+
+    .modal {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .modalint {
+        background-color: transparent; 
+    }
+    #onu-dentro, #onu-ultrapassou {
+        display: none;
+    }
+}
+
+@media screen and (max-width:689px) {
+    nav{
+        margin-right: 0;
+    }
+    .botao{
+        display: none;
+    }
+
+    div#faixaint {
+        padding-bottom: 40px;
+    }
+    #faixa-espaco {
+        justify-content: center;
+        width: 70%;
+    }
+    section#faixa, div#faixaint img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 7vw;
+    }
+    h1 + h2 {
+        font-size: 3.5vw;
+        line-height: 28px;
+    }
+    h3#paragrafo {
+        font-size: 2.8vw;
+    }
+
+    h4 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #faixa-espaco {
+        width: 86%;
+    }
+    h1 {
+        font-size: 10.5vw;
+    }
+    h1 + h2 {
+        font-size: 5vw;
+        line-height: 26px;
+    }
+    h3#paragrafo {
+        font-size: 4vw;
+    }
+
+    h4 {
+        font-size: 20px;
+        width: 86%;
+    }
+    div#categorias {
+        display: none;
+        margin: 10px 0 30px 0;
+    }
+    label.labres {
+        font-size: 18px;
+        padding: 10px 40px 10px 20px ;
+    }
+    div#fileiras {
+        display: none;
+    }
+    input.zoom {
+        height: 38px;
+	    width: 115px;
+        font-size: 18px;
+    }
+    input.num {
+        height: 38px;
+	    width: 70px;
+    }
+    label {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 352px) {
+    p#total {
+        height: 160px;
+        margin-top: -40;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 12vw;
+    }
+    h1 + h2{
+        line-height: 22px;
+    }
+
+    div.container {
+        margin: 20px 0 -40px 0;
+    }
+}

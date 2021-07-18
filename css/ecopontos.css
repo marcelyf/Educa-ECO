@@ -1,0 +1,327 @@
+/* toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Itim', cursive;
+}
+
+/* corpo da página */
+body {
+    background-color: #6CCCEC;
+}
+
+#direitos p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    background-image: url(../img/fundo.jpg);
+  }
+
+/* faixa */
+#faixaint {
+    display: flex;
+    justify-content: center;
+    padding-top: 114px;
+    align-items: center;
+    background-color: #FD8251;
+}
+    #faixaint img{
+        height: auto;
+        width: 36%;
+    }
+    #faixa-espaco {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        animation-duration: 1.5s;
+        animation-name: faixa;
+    }
+    #faixa {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    h1 {
+        padding-bottom: 20px;
+        font-size: 4.4vw;
+    }
+    h2 {
+        font-size: 1.8vw;
+        color: #000000bd;
+        margin-bottom: 20px;
+        line-height: 28px;
+    }
+    h2 + h3 {
+        font-size: 1.3vw;
+        color: #000000bd;
+    }
+
+/* parte principal do site */
+main {
+    display: flex;
+    justify-content: center;
+    animation-duration: 0.8s;
+    animation-name: faixa;
+}
+    #principal {
+        margin: 45px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        height: 450px;
+    }
+    h3, p {
+        color: #000000d8;
+    }
+
+/* mapa */
+#local-mapa, #local-endereco {
+    width: 45%;
+    height: 100%;
+}
+    #local-mapa #map-p {
+        width: 100%;
+        height: 24%;
+    }
+    #local-mapa #mapa, #end-p + div {
+        width: 100%;
+        height: 76%;
+        display: flex;
+        align-items: flex-end;
+    }
+    #mapa #map {
+        width: 100%;
+        height: 100%;
+        border: 1.5px solid black;
+        border-radius: 2em;
+    }
+    #map-p p {
+        font-size: 24px;
+        color: black;
+    }
+
+/* endereço */
+#local-endereco #end-p {
+    display: flex;
+    width: 100%;
+    height: 24%;
+    justify-content: center;
+    align-items: center;
+}
+    #local-endereco #endereco {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1.5px solid black;
+        border-radius: 2em;
+        background-color: #ebebebe0;
+    }
+    #endereco>div {
+        margin-left: 10px;
+        width: 85%;
+        padding-top: 10px;
+        overflow: auto;
+    }
+    #endereco p {
+        margin-bottom: 15px;
+        color: #000000d8;
+    }
+    #endereco span {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F9DC5C;
+    }
+    #end-p p {
+        font-size: 26px;
+        color: black;
+    }
+
+/* @ */
+/* @keyframes (movimentação da faixa) */
+@keyframes faixa {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+/* @media (responsivo)*/
+@media screen and (min-width: 1300px){
+    #faixa-espaco {
+        width: 90.1%;
+    }
+    h1 {
+        font-size: 4.5vw;
+    }
+    h2 {
+        font-size: 1.9vw;
+        line-height: 33px;
+    }
+    h2 + h3 {
+        font-size: 1.4vw;
+    }
+
+    #map-p p {
+        font-size: 26px;
+    }
+    #end-p p {
+        font-size: 28px;
+    }
+    #endereco span {
+        font-size: 22px;
+    }
+    h3, p {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1096px){
+    nav{
+        margin-right: 60px;
+    }
+
+    #faixa-espaco {
+        width: 85%;
+    }
+    #faixaint img {
+        width: 51%;
+        height: auto;
+    }
+    #faixa {
+        width: 46%;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    h2 {
+        font-size: 2vw;
+        line-height: 26px;
+    }
+    h2 + h3 {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    #map-p p {
+        font-size: 20px;
+    }
+    #end-p p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #faixa {
+        width: 46%;
+    }
+    #faixaint img {
+        width: 50%;
+    }
+    h2 {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    nav{
+        margin-right: 0;
+    }
+    .botao{
+        display: none;
+    }
+
+    #faixaint{
+        padding-bottom: 30px;
+    }
+    #faixa-espaco {
+        justify-content: center;
+        width: 70%;
+    }
+    #faixa, #faixaint img  {
+        width: 100%;
+    }
+    h1{
+        font-size: 7vw;
+    }
+    h2{
+        font-size: 3.5vw;
+        line-height: 28px;
+    }
+    h2 + h3 {
+        font-size: 2.8vw;
+    }
+
+    #principal {
+        width: 70%;
+        height: 900px;
+    }
+    #local-mapa, #local-endereco {
+        width: 100%;
+        height: 50%;
+    }
+    #map-p p {
+        font-size: 24px;
+    }
+    #end-p p {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #map-p p {
+        font-size: 22px;
+    }
+    #end-p p {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #faixa-espaco {
+        width: 86%;
+    }
+    h1{
+        font-size: 10.5vw;
+    }
+    h2 {
+        font-size: 5vw;
+        line-height: 26px;
+    }
+    h2 + h3{
+        font-size: 4vw;
+    }
+
+    #principal {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    #map-p p {
+        font-size: 20px;
+    }
+    #end-p p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 12vw;
+    }
+    h2 {
+        line-height: 22px;
+    }
+}

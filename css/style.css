@@ -1,0 +1,377 @@
+
+*
+{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: 'itim',cursive; 
+    background: color #fff; 
+}
+
+
+#logo{
+    font-size: 4vh;
+    color: rgb(5, 221, 41);
+}
+#logo img{
+    width: 74px;
+    height: 74px;
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; 
+    background-color: white;
+}
+
+.santos .menu #imgmenu{
+    width: 40px;
+    height: 38px;
+}
+
+.santos{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+
+.santos ul.menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    margin-left: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+.botao{
+    margin-left: 20px;
+    font-family: 'Itim', cursive;
+    height: 40px;
+    width:120px;
+    border: 1.5px solid black;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+.botao:hover{
+    background-color: #36e136;
+    transition: 0.5s;
+}
+
+.santos .menu ul{
+    list-style:none ;
+}
+
+.santos header.menu{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    
+}
+
+.santos .menu #hamburguer{
+    background-image: url(../img/background.jpg);
+    display: none;
+    position:absolute; 
+    margin-top: 45px;
+}
+.santos .menu #hamburguer a {
+    color: #36e136;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #c0c0c0;
+    text-decoration: none;
+}
+
+.santos .menu a.js {
+    font-size: 40px;
+    float: left;
+    display: block;
+    position: relative;
+    border: none;
+}
+
+.santos .menu #hamburguer a:hover {
+    background-color: #36e136;
+    color: white;
+    transition: 0.5s;
+}
+
+
+input{
+    margin: 17px 1005px 0 15px;
+    padding: 0px 35px;
+}
+
+
+body{
+    font-family: 'itim',cursive;
+    background: color #fff; 
+}
+
+/* SOBRE */
+.sobre{
+    padding: 55px;
+    text-align: center;
+    font-size: 25px;
+    background-color: #B4FF63;
+    height: 400px;
+}
+
+.sobre h1{
+    padding-bottom:10px ; /* espaçamento em baixo */
+    text-align: center;
+    font-size: 50px;
+    animation-duration: 1.5s;
+    animation-name: slide1;
+    /* padding-right: 30px; */
+}
+
+.sobre h3{
+    animation-duration: 1.5s;
+    animation-name: slide1;
+}
+
+.textosobre h1{
+    padding-bottom:10px ; /* espaçamento em baixo */
+    text-align: 200px;
+    font-size: 50px;
+    margin-right: 100px;
+    animation-duration: 1.5s;
+    animation-name: slide1;
+    flex-direction: column;
+    }
+    
+    .textosobre h3{
+        animation-duration: 1.5s;
+        animation-name: slide1;
+        flex-direction: column;
+    }
+    
+    .imagemsobre{
+       margin: 10px;
+       display: flex; /* para que a imagem fosse flexivel dentro do seu container */
+       justify-content: center;
+       align-items: center;
+       width: 30%;
+    }
+    
+    .imagem img{
+        float: left;
+        
+        }
+
+
+/* MEIO */
+
+.artigos {
+    margin: 25px 100px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+.artigo1{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(252, 250, 253);
+    background-size: cover;
+    background-image: url(https://sustentavel.com.br/wp-content/uploads/2018/07/composto-810x405.jpg);
+    opacity: 90%;
+}
+
+
+.artigo2{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(245, 244, 247);
+    background-size: cover;
+    background-image: url(https://fia.com.br/blog/wp-content/uploads/2019/09/meio-ambiente-o-que-e-importancia-composicao-presxervacao-730x483.jpg);
+    opacity: 90%;
+}
+
+.artigo3{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(248, 247, 248);
+    background-size: cover;
+    background-image: url(https://www.fragmaq.com.br/wp-content/uploads/2015/05/2-tecido-sustentavel.jpg);
+    opacity: 90%;
+}
+
+.artigo4{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(255, 254, 255);
+    background-size: cover;
+    background-image: url(https://www.verdeghaia.com.br/wp-content/uploads/2021/03/tripe-da-sustentabilidade-2-1024x683.png);
+    opacity: 90%;
+}
+
+.artigo5{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 20px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(250, 247, 252);
+    background-size: cover;
+    background-image: url(https://www.cbnmaringa.com.br/uploads_lg/63adc4e00c5746e4cab40a7a3e131d46.jpg);
+    opacity: 90%;
+}
+
+.artigo6{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(254, 252, 255);
+    background-size: cover;
+    background-image: url(https://i0.wp.com/2.bp.blogspot.com/-h7aIADJ9t7Y/WC5uf75CBhI/AAAAAAAACis/W-GKbwlpPf4V5tnG4nj4YN2prcpNzGCTACLcB/s1600/images%2B%252816%2529.jpg?ssl=1);
+    opacity: 90%;
+}
+
+.artigo7{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(252, 250, 253);
+    background-size: cover;
+    background-image: url(https://blog.brkambiental.com.br/wp-content/uploads/2020/02/economia-de-%C3%A1gua-1.jpg);
+    opacity: 90%;
+}
+
+
+.artigo8{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(245, 244, 247);
+    background-size: cover;
+    background-image: url(https://imagens-revista.vivadecora.com.br/uploads/2018/11/Plantas-para-dentro-de-casa.jpg);
+    opacity: 90%;
+}
+
+.artigo9{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(248, 247, 248);
+    background-size: cover;
+    background-image: url(https://www.dicaspetz.com.br/wp-content/uploads/2019/04/cuidar-de-plantas-quintal.jpg);
+    opacity: 90%;
+}
+
+.artigo10{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(255, 254, 255);
+    background-size: cover;
+    background-image: url(https://br.habcdn.com/photos/project/medium/mini-jardim-em-vaso-de-ceramica-933459.jpg);
+    opacity: 90%;
+}
+
+.artigo11{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(250, 247, 252);
+    background-size: cover;
+    background-image: url(https://i.pinimg.com/originals/77/47/57/7747570f2e95ae8a143f0e8c7d3c517b.jpg);
+    opacity: 90%;
+}
+
+.artigo12{
+    text-align: left;
+    margin: 5px 25px;
+    padding: 10px;
+    background-color: #ecf0f100;
+    border-radius: 16px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid rgb(254, 252, 255);
+    background-size: cover;
+    background-image: url(https://blog.solarprime.com.br/app/uploads/2018/12/257057-consciencia-ambiental-entenda-o-que-e-e-a-sua-importancia-1280x640.jpg);
+    opacity: 90%;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    transition-duration: 0.6;
+    margin-top: 170px;
+    margin-right: 170px;
+    /* opacity: 100%; */
+}
+
+    @media screen and (max-width: 768px) {
+        .sobre, .artigos, header
+        
+    }
+
+    @media screen and (max-width: 768px){
+        
+    }

@@ -1,0 +1,265 @@
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font: 600 16px/18px 'itim',cursive;
+}
+
+body {
+    margin: 0;
+    color: #000;
+    background-image: url(../img/fixo.png);
+    background-repeat: no-repeat;
+    background-color: #6CCCEC;
+}
+
+.login-box {
+    margin-top: 20px;
+    margin-bottom: 18px;
+    margin-left: 45px;
+    width: 100%;
+    max-width: 90%;
+    min-height: 80%;
+    position: relative;  
+    border: 2px solid black;  
+    border-radius: 15px;
+    background-color: #c0fa81;
+}
+div.login-box
+
+/* posição da caixa verde */
+.card{
+    margin-left: 30%; 
+     margin-right: 30%; 
+}
+
+
+/* posição dentro da caixa verde */
+.login-snip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 75px 50px 70px 50px;
+    outline:none
+
+}
+
+
+/* fazer a tela de login e cadastro virar */
+.login-snip .login,
+.login-snip .cadastro {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear
+}
+
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .grupo .check {
+    display: none
+}
+/* deixa o texto com s primeiras letras maiuscculas */
+.login-snip .tab,
+.login-space .grupo .label,
+.login-space .grupo .button {
+    text-transform: uppercase
+}
+/* caixa onde fica o entrar e cadastro */
+.login-snip .tab {
+    font-size: 22px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent
+    
+    
+}
+/* sobre a cor do entrar e cadastro quando está selecionado */
+.login-snip .sign-in:checked+.tab,
+.login-snip .sign-up:checked+.tab {
+    color:#000;
+    border-color: #36e146;
+}
+
+.login-space {
+    min-height: 345px;
+    position: relative;
+    perspective: 1100px;
+    transform-style: preserve-3d
+}
+/* distancia entre as caixas de texto */
+.login-space .grupo {
+    margin-bottom: 5px
+}
+
+/* cor da caixa de usuario e senha */
+input#user.input{
+    background-color:#fff;
+}
+
+input#pass.input{
+    background-color:#fff;
+}
+
+.login-space .grupo .label,
+.login-space .grupo .input,
+.login-space .grupo .button {
+    width: 100%;
+    color: #000;
+    display: block
+}
+/* botão */
+.login-space .grupo .input,
+.login-space .grupo .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .1)
+}
+/*como aparece a senha  */
+.login-space .grupo input[data-type="password"] {
+    text-security: circle;
+    -webkit-text-security: circle
+}
+/* escrita dos nomes "login e cadastro" */
+.login-space .grupo .label {
+    color: #000;
+    font-size: 12px
+
+}
+/* cor do botão */
+.login-space .grupo .button {
+    background: #36e146
+    
+}
+/* quadrado do "mantenha conectado" */
+.login-space .grupo label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: #36e146
+}
+/* simbulo de confere do ""mantenha conctado */
+.login-space .grupo label .icon:before,
+.login-space .grupo label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    transition: all .2s ease-in-out 0s
+}
+/* simbulo de confere do ""mantenha conctado */
+.login-space .grupo label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0)
+}
+/* simbulo de confere do ""mantenha conctado */
+.login-space .grupo label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0)
+}
+/* cor do texto "mantenha conectado" */
+.login-space .grupo .check:checked+label {
+    color: #000
+}
+/* simbulo de confere do ""mantenha conctado */
+.login-space .grupo .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg)
+}
+/* simbulo de confere do ""mantenha conctado */
+.login-space .grupo .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg)
+}
+
+.login-snip .sign-in:checked+.tab+.sign-up+.tab+.login-space .login {
+    transform: rotate(0)
+}
+
+.login-snip .sign-up:checked+.tab+.login-space .cadastro {
+    transform: rotate(0)
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.hr {
+    height: 2px;
+    margin: 20px 0 10px 0;
+    background:#000
+}
+/* onde fica o texto "esqueci senha" */
+.foot {
+    text-align: center
+}
+/* caixa total */
+.card {
+    width: 500px;
+    left: 100px
+}
+/* texto que fica dentro da caixa de texto */
+::placeholder {
+    color: #000
+}
+
+/* RESPONSIVO */
+
+/* tablet */
+@media screen and (max-width:780px) {
+    .card{
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 15%;
+        margin-right: 10%;
+    }
+
+    body{
+        background-image: url(../img/azulsimples.png);
+    }
+}
+/* celular */
+@media screen and (max-width:500px){
+    .card{
+       max-width: 100%;
+       min-width: 100%;
+       margin: 0 0 0 0 ;
+       margin-top: 10%;
+       border-radius: 5px;
+    }
+    .login-box{
+        max-width: 100%;
+        min-width: 100%;
+        margin: 5% 0 5% 0 ;
+        border-radius: 5px;
+    }
+}

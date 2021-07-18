@@ -1,0 +1,265 @@
+/* toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Itim', cursive;
+}
+
+body {
+    background-color: #EBEBEB;
+}
+
+ /* "CAPA" */
+
+.sobre{
+    background-color: #B4FF63;
+    display: flex; /*para que a imagem fosse flexivel dentro do seu container*/
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; /*maximo de tamanho que ela chega*/
+    padding-top: 114px;
+}
+    .sobre img{
+        width: 36%;
+        height: auto;
+    }
+    #faixa-espaco {
+        display: flex;
+        flex-direction: row; /* direção de linha que ele esta indo */
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        animation-duration: 1.5s;
+        animation-name: faixa;
+    }
+    .textosobre {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+    }
+        .textosobre h1{
+            font-size: 4.4vw;
+            margin-bottom:20px ; /* espaçamento em baixo */
+        }
+        .textosobre h3{
+            font-size: 1.8vw;
+            color: #000000bd;
+            line-height: 28px;
+        }
+        .textosobre h2{
+            font-size: 2vw;
+            color: #000000bd;
+        }
+
+/* area dos artigos */
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    animation-duration: 0.8s;
+    animation-name: faixa;
+}
+  .caixa-artigo {
+    margin: 15px;
+    position: relative;
+    transition: transform 0.1s;
+    display: flex;
+    justify-content: center;
+  }
+    .caixa-artigo:hover {
+        transform: scale(1.08);
+        opacity: 90%;
+    }
+    .link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .caixa-fundo{
+        width: 330px;   
+        height: auto;
+        display: block;
+        object-fit: cover;
+        position: relative;
+        border-radius: 2em;
+        z-index: -1;
+    }
+        .caixa-titulo {
+            position: absolute;
+            bottom: 0rem;
+            padding: 0.5rem;
+            color: white;
+            transition: background-color 1.5s ease;
+            text-align: center;
+            text-shadow: 2px 3px black;
+        }
+            .titulo{
+                align-items: center;
+                text-align: center;
+            }
+    h2 {
+        display: block;
+        font-size: 25px;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+/* @ */
+/* @keyframes - movimentação */
+@keyframes faixa {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+      }
+}
+
+/*@media - responsivo */
+@media screen and (min-width: 1300px){
+    #faixa-espaco {
+        width: 90.1%;
+    }
+
+    .textosobre h1{
+        font-size: 4.5vw;
+    }
+    .textosobre h3{
+        font-size: 1.9vw;
+        line-height: 33px;
+    }
+    .textosobre h2 {
+        font-size: 2.1vw;
+    }
+}
+
+@media screen and (max-width: 1096px){
+    nav{
+        margin-right: 60px;
+    }
+
+    #faixa-espaco {
+        width: 85%;
+    }
+    .sobre img{
+        width: 51%;
+        height: auto;
+    }
+    .textosobre {
+        width: 46%;
+    }
+    .textosobre h1{
+        font-size: 5vw;
+    }
+    .textosobre h3{
+        font-size: 2vw;
+        line-height: 26px;
+    }
+    .textosobre h2 {
+        font-size: 2.6vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textosobre {
+        width: 46%;
+    }
+    .sobre img {
+        width: 50%;
+    }
+    .textosobre h1{
+        margin-bottom: 15px;
+    }
+    .textosobre h3{
+        line-height: 20px;
+    }
+    .textosobre h2 {
+        margin-top: 15px;
+    }
+
+    .caixa-fundo{
+        width: 300px;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    nav{
+        margin-right: 0;
+    }
+    .botao{
+        display: none;
+    }
+
+    .sobre{
+        padding-bottom: 30px;
+    }
+    #faixa-espaco {
+        justify-content: center;
+        width: 70%;
+    }
+    .textosobre, .sobre img {
+        width: 100%;
+    }
+    .textosobre h1{
+        font-size: 7vw;
+        margin-bottom: 20px;
+    }
+    .textosobre h3{
+        font-size: 3.5vw;
+        line-height: 28px;
+    }
+    .textosobre h2 {
+        font-size: 3.8vw;
+        margin-top: 20px;
+    }
+
+    .caixa-fundo{
+        width: 70%;
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #faixa-espaco {
+        width: 86%;
+    }
+    .textosobre h3{
+        font-size: 5vw;
+        line-height: 26px;
+    }
+    .textosobre h1{
+        font-size: 10.5vw;
+    }
+    .textosobre h2 {
+        font-size: 5.3vw;
+    }
+
+    .caixa-fundo{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .textosobre h1 {
+        font-size: 12vw;
+    }
+    .textosobre h3{
+        line-height: 22px;
+    }
+} 

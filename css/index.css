@@ -1,0 +1,339 @@
+/*Organiza todo o arquivo*/
+*{
+padding: 0;/*retira qualquer espaçamento inicial da pagina*/
+margin: 0;    
+box-sizing: border-box;/*As propriedades de largura e altura incluindo content, paddding e border, define como a largura e a altura de um elemento são calculadas*/
+font-family: 'Itim', cursive;
+}
+
+body{
+	background:url(../img/background.jpg); /*define que o body terá a imagem referida*/
+}
+
+
+.modal-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+	z-index: 9999;
+}
+
+  /*sessão 2 - Slides do site*/
+.slides{
+background-image: url(../img/slide1.png);
+background-size: cover;/*é o que permite que a imagem se adapte ao tamanho da tela*/
+display:flex;
+justify-content: center;/*alinha os itens do flexbox horizontalmente ao centro*/
+align-items: center;/*alinha os itens do flexbox verticalmente ao centro*/
+text-align: center;/*alinha o texto ao centro*/
+min-height: 100vh;
+flex-direction: column;
+color: white;
+}
+
+	.slides h1{
+		font-size:9vw;/*adapta a fonte de acordo com o tamanho da janela*/
+		text-shadow: 3px 3px 6px black;
+	}
+	.slides h3{
+		font-size:3vw;/*adapta a fonte de acordo com o tamanho da janela*/
+		text-shadow: 2px 3px black;
+	}
+
+	
+/*Sobre o projeto*/
+body .projeto{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-height: 100vh;
+	
+}
+/*Altera toda a flexbox*/
+.projeto{
+	position: relative;
+	display:flex;
+	align-items: center;
+	flex-wrap: wrap;/*quebra os itens do flexbox em uma outra linha*/
+	width: 100%;
+	flex-direction: column;
+	padding: 40px;
+} 
+	/*Altera os itens da flex box*/
+	.projeto .proje{
+		position: relative;
+		max-width:100%;
+		margin: 10px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		font-family: 'Itim', cursive;	
+	}
+	/*Define como as imagens da div projeto devem se comportar*/
+	.projeto .proje .imagem{
+		max-width:150px;/*define que a largura maxima das imagens é de 150px*/
+		flex: 0 0 150px;/*Simplifica as propriedades flex-grow, flex-shrink e flex-basis em uma linha.*/
+		
+	}
+	
+	/*Formata todo o texto presente na div texto - projeto*/
+	.projeto .proje .texto{
+		margin-left: 300px;
+		font-size: 2vw;
+		text-align: justify;
+		color: tomato;
+		font-weight: 600;
+	}
+	/*Formata apenas o texto que usa a tag p na div texto - projeto*/
+		.projeto .proje .texto p{
+		color:tomato;
+		
+	}
+	/*Define o tamanho das imagens na div projeto*/
+	.projeto .proje .imagem img{
+		width:400px;
+	}
+	
+	/*Altera titulos com a tag H2*/
+	.projeto .proje .texto h2{
+		font-size: 5vw;/*Altera o tamanho da fonte de acordo com o taamanho da janela*/
+		font-weight: 700;/*Deixa a fonte em negrito*/
+		margin-bottom: 20px;
+		color:darksalmon;
+	}
+	
+	/*Altera titulos com a tag H1*/
+	.projeto .titulo h1{
+		font-size: 7vw;
+		font-weight: 900;
+		color: rgb(61, 235, 84);
+		text-decoration: overline underline;
+	}
+	.projeto .titulo{
+		margin: 0 auto 0 auto;
+	}
+	
+/*Sobre os integrantes do projeto*/
+.nos{
+	height: auto;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	flex-direction: column;
+	padding: 30px;
+	margin: 0 auto;
+	
+	
+}  	
+
+.nos .titulo{
+	text-align: center;
+	width: 100%;
+	font-weight: 900;
+	color: coral;
+	text-decoration: overline underline;
+}
+.nos .titulo h1{
+	font-size: 7vw;
+}
+
+.full{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;	
+	width: 100%;
+	height: auto;
+	padding:0px 60px;
+}
+
+.nos .integrante{
+	cursor: pointer;
+	width: 15%;
+	align-items:center;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0px 60px;
+	display: flex;
+	margin-top: 20px;
+	
+}
+.nos .integrante p{
+	border: 3px dashed coral;
+	border-radius: 5em;
+	text-align: center;
+	font-size: 3vw;
+	margin-top: 10px;
+	font-weight: 900;
+	padding: 10px;
+	width: auto;
+}
+.nos .integrante img{
+	border: 3px dashed coral;
+	border-radius: 50%;
+	width: 14vw;
+	
+} 
+
+#redes{
+	height: 50px;
+display: flex;
+flex-direction: row;
+
+align-items: center;
+
+}
+
+	#redes img{
+		margin: 10px;
+		width: 50px;
+	}
+
+p{
+	margin-bottom: 0;
+}
+
+.modal-body ul li {
+	list-style: none;
+}
+
+/*responsiva o meu quando chega em 900px de width e adapta a telas menores*/
+@media screen and (max-width:900px) {
+	.projeto{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+		.projeto .proje{
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		}
+			.projeto .proje .texto{
+			width: 400px;
+			margin-left: 0px;
+			font-size: 2.5vw;
+			text-align: center;
+			font-weight: 600;
+			}
+				.projeto .proje .imagem img{	
+				padding-right: 25px;
+				width:200px;
+				}
+	}
+	@media screen and (max-width:700px) {
+		
+		.botao{
+			display: none;
+		}
+		
+		.projeto{
+			justify-content: center;
+			align-content: center;
+		}
+			.projeto .proje{
+			margin: 0px;
+			padding: 0px;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			
+			}
+				.projeto .proje .texto{
+				width: 80vw;
+				font-size: 4vw;
+				text-align: center;
+			
+				font-weight: 600;
+				}
+					.projeto .proje .imagem img{	
+					width:200px;
+					}
+
+					.full{
+						display:flex;
+						flex-direction: row;
+						flex-wrap: nowrap;	
+						justify-content: center;
+						width: 100%;
+						height: auto;
+						padding:0px 50px;
+					}
+
+					.nos .integrante img{
+						border: 3px dashed coral;
+						border-radius: 50%;
+						width: 25vw;
+						
+					} 
+		}
+		@media screen and (max-width:600px) {
+			.full{
+				display:flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+				width: 100%;
+				height: auto;
+				padding:0px 0px;
+			}
+			.nos .integrante{
+				cursor: pointer;
+				width: 15%;
+				align-items:center;
+				align-content: center;
+				justify-content: center;
+				flex-direction: column;
+				margin: 0px 40px;
+				display: flex;
+				
+			}
+			nav .menu #imgmenu{
+				width: 40px;
+				height: 38px;
+				}
+		
+				
+				.nos .integrante p{
+					border: 3px dashed coral;
+					border-radius: 5em;
+					text-align: center;
+					font-size: 2.5vw;
+					margin-top: 10px;
+					font-weight: 900;
+					padding: 5px;
+					width: auto;
+				}
+			}
+		@media screen and (max-width:320px) {
+	
+			.full{
+				display:flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: center;
+				width: 100%;
+				height: auto;
+				padding:0px 0px;
+			}
+			.projeto{
+				position: relative;
+				display:flex;
+				align-items: center;
+				flex-wrap: wrap;/*quebra os itens do flexbox em uma outra linha*/
+				width: 100%;
+				flex-direction: column;
+				padding: 0px;
+			} 
+		}

@@ -1,0 +1,692 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/background.jpg);
+    font-family: 'itim',cursive;
+    
+}
+
+/*Define toda a pagina e a deixa flexivel para que ambos os conters fiquem organizados*/
+.conter{
+    display: flex;
+    flex-direction: row;
+    height: auto;/*O tamanho do conter que se ajusta ao tamanho da tela*/
+    width: 100%;/*A largura que ele ocupa na tela*/
+}
+
+/*.concluido{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    }
+*/
+
+/*Altera o menu hamburguer*/
+#logo{
+	font-size: 4vh;
+	color: rgb(5, 221, 41);
+	}
+
+	#logo img{
+		width: 74px;
+		height: 74px;	
+	}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul a:hover {
+  background: #b4ff63;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  height:100px;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+  #menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    background: white;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .botao{
+	height: 40px;
+	width:120px;
+	border: 1.5px solid black;
+	border-radius: 2em;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+	.botao:hover{
+		background: #b4ff63;
+	}
+
+#nav{
+	display: flex;
+  width: 100%;
+  
+}
+
+  #nav.active #menu {
+    height: 80vh;
+    visibility: visible;
+    overflow-y: hidden;
+  }
+
+  #menu a {
+    color: black;
+    display: block;
+    padding: 1rem;
+    margin: 0px;
+    font-size: 25px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    border-top: 4px solid;
+    width: 30px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(133deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7.5px;
+}
+
+.conter .desafio #concluido{
+  text-align: center;
+  margin-right: 30px;
+  border-radius: 20px;
+  padding: 0px 5px;
+  border:3px solid tomato;
+  width: auto;
+  position: relative;
+  font-size: 30px;
+  }
+  
+
+/*conter desafios*/
+.desafio{
+    background-color: #6CCCEC;/*Define a cor do fundo*/
+    width: 55%;/*Define que o conter desafios ocupa 55% do conter principal*/
+    display: flex;/*O torna flexivel, permitindo um melhor posicionamento de seus itens*/
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.itens{
+    width: 350px;/*define o tamanho da div itens dentro da div desafio*/
+    height: 100%;/*define que sua altura é de 100% em relação a div pai desafio*/
+    display: flex;
+    justify-content: center;/*faz um alinhamento horizontal centralizado nos itens da div desafios*/
+    align-items: center;/*faz um alinhamento vertical centralizado nos itens da div desafios*/
+}
+
+/*Se refere ao quadrado central que mostra o desafio*/
+    .item1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;/*Alinha os os itens(p,checkbox) ao meio*/
+        font-size: 3.2vw;
+        width: 350px;
+        margin: 0px 80px;
+        height: 50vh;
+        border: 4px solid #EBEBEB;
+        border-radius: 1em;/*Arredonda um pouco as bordas*/
+        padding: 30px 0px;/*Dá um espaçamento encima e embaixo da div item1*/
+    }
+
+    #link{
+      display: none;
+      color: tomato;
+      font-size: 20px;
+      font-weight: 700;
+      right: 0;
+      margin-bottom: 90px;
+    }
+
+
+    /*Formata o botão que representa a conclusao dos desafios*/
+    #check{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+    }
+
+      #check img{
+        width: 40px;
+        height: 40px;
+      }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100% 100%;
+      
+  }
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .0s ease-in-out;
+}
+/*conter de informações sobre o desafio e sobre o usuario*/
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBEB;
+    width: 45%;
+}
+
+    .cabecalho{
+      background-color:#B4FF63;
+      height: 100px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      
+    }
+
+
+
+    .info .cabecalho p{
+     
+      font-size: 25px;
+      font-weight: 700;
+      }
+
+    .info .sessao{
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #imagem{
+        background-color:#DFB2F4;
+        border-radius: 50%;
+        margin: 50px;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+        #imagem img{
+            width: 200px;
+            height: 210px;
+        }
+
+#texto{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+    #texto p{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    #texto a{
+        color: tomato;
+        font-size: 20px;
+        text-align: left;
+        font-weight: 700;
+
+    }
+
+#botaolista{
+border: none;
+text-align: center;
+background-color: transparent;
+right: 0;
+top:20px;
+position: absolute;
+margin: 10px;
+font-size: 25px;
+font-weight: 700;
+}
+    #botaolista img{
+      width: 20px;
+    }
+
+.conter #lista{
+display: none;
+flex-direction: column;
+align-items: center;
+width: 45%;
+height: 85vh;
+z-index: 9999;
+padding: 10px;
+margin-top:88px;
+right: 0;
+overflow: auto;
+background-color: #b4ff63;
+position: absolute;
+animation: go 1s;
+}
+
+@keyframes go{
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes back{
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+    #lista h2{
+      font-weight: 800;
+      font-size: 3.5vw;
+      color: white;
+    }
+
+    #itemlista p{
+      width: 100%;
+      display: flex;
+      height: 90px;
+      background-color: #DFB2F4;
+      border-radius: 1rem;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 20px 0px;
+      padding: 10px;
+      align-items: center;
+      border:solid black;
+    }
+
+
+    #lista::-webkit-scrollbar{
+      width:12px;
+      border: 1px solid #EBEBEB;
+
+      }
+      
+     #lista::-webkit-scrollbar-thumb{
+      background-color: #DFB2F4;
+      border-radius: 6px;
+     }
+
+     #lista::-webkit-scrollbar-thumb:hover{
+      background-color: #d893f8;
+      
+     }
+
+     #recompensa{
+       padding-top: 20px;
+       cursor: pointer;
+     }
+
+     .modal-body{
+       display: flex;
+       
+       
+       flex-direction: column;
+     }
+
+        .modal-body img{
+          align-self: center;
+          width: 150px;
+        }
+        .modal-body p{
+         font-size: 25px;
+         font-weight: 600;
+        }
+
+footer{
+	display: flex;
+  margin-top: 30px;
+	height: 50vh;
+	text-align: center;
+	justify-content: center;
+  flex-direction: row;
+	align-items:center;
+  justify-content: space-around;
+	font-size: 15px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+footer h2{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#redesocial img{
+  width: 30px;
+}
+
+#logo, #redesocial, #creditos, #contato{
+height: 110px;
+padding: 10px;
+text-align: justify;
+}
+
+#logo img{
+  width: 70px;
+  height: 70px;
+}
+
+
+#direitos{
+  width: 100%;
+  text-align: center;
+}
+
+#recompensa1{
+  display: none;
+}
+@media screen and (max-width:900px) {
+  .conter #lista{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    right: 0;
+    overflow: auto;
+    background-color: #b4ff63;
+    position: absolute;
+    }
+
+  footer{
+    display: flex;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .conter{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;/*O tamanho do conter que se ajusta ao tamanho da tela*/
+    width: 100%;/*A largura que ele ocupa na tela*/
+}
+
+  #direitos{
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  #botaolista{
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    right: 0;
+    top:20px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    }
+}
+
+@media screen and (max-width:800px){
+  .conter #lista{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    right: 0;
+    overflow: auto;
+    background-color: #b4ff63;
+    position: absolute;
+    }
+
+
+    #link{
+      display: block;
+      color: tomato;
+      font-size: 17px;
+      font-weight: 700;
+      right: 0;
+      margin-bottom: 90px;
+    }
+
+    #lista h2{
+      font-weight: 800;
+      font-size: 7vw;
+      color: white;
+    }
+
+    .info{
+        display: none;
+    }
+     .desafio{
+        width: 100%;
+    }
+
+    #item1{
+        height: 200px;
+        font-size: 20px;
+    }
+
+    .itens{
+        width: 45%;
+    }
+ 
+    #recompensa1{
+      display: flex;
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+}
+
+@media screen and (max-width:600px){
+  .info{
+      display: none;
+  }
+   .desafio{
+      width: 100%;
+  }
+
+  .item1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;/*Alinha os os itens(p,checkbox) ao meio*/
+    font-size: 6vw;
+    width:250px;
+    margin: 50px;
+    height: 50vh;
+    border: 4px solid #EBEBEB;
+    border-radius: 1em;/*Arredonda um pouco as bordas*/
+    padding: 30px 0px;/*Dá um espaçamento encima e embaixo da div item1*/
+}
+
+  .itens{
+      width: auto;
+  }
+
+  #nav.active #menu {
+    height: 100vh;
+    visibility: visible;
+    overflow-y: hidden;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    background: white;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width:400px){
+  .conter #lista{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    right: 0;
+    overflow: auto;
+    background-color: #b4ff63;
+    position: absolute;
+    }
+
+  .info{
+      display: none;
+  }
+   .desafio{
+      width: 100%;
+  }
+
+  .item1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;/*Alinha os os itens(p,checkbox) ao meio*/
+    font-size: 5vw;
+    width:200px;
+    margin: 35px;
+    height: 30vh;
+    border: 4px solid #EBEBEB;
+    border-radius: 1em;/*Arredonda um pouco as bordas*/
+    padding: 30px 0px;/*Dá um espaçamento encima e embaixo da div item1*/
+}
+
+  .itens{
+      width: 250px;
+  }
+  
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70% 100%;
+    
+}
+
+#nav.active #menu {
+  height: 100vh;
+  visibility: visible;
+  overflow-y: auto;
+  left:0;
+}
+}

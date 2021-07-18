@@ -1,0 +1,382 @@
+/*Retira qualquer espaçamento inicial que o site possa ter o deixando em 0*/
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; /* */
+}
+
+body{
+font-family: 'itim',cursive; /* definir a fonte da tela*/
+background: color #fff; /* definir a cor do body */
+}
+
+/* "CAPA" */
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    padding-top: 114px;
+    align-items: center;
+    background-color: #f9dc5c;
+}
+
+#faixa-espaco {
+    display: flex; /* para que a imagem fosse flexivel dentro do seu container */
+    flex-direction: row; /* direção de linha que ele esta indo */
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    animation-duration: 1.5s;
+    animation-name: faixa;
+}
+
+.textosobre {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.textosobre h1 {
+    padding-bottom: 20px;
+    font-size: 4.4vw;
+}
+
+.textosobre h3 {
+    font-size: 1.8vw;
+    color: #000000bd;
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+
+.imagemsobre{
+   height: auto;
+   width: 36%;
+}
+
+.imagemsobre img{
+    width: 100%;
+    height: auto;
+}
+
+/* fazer a transição */
+@keyframes faixa {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+/* "ONGs" */
+
+.container{
+position:relative; 
+width: 100%;
+display: flex; /* indica que é flex */
+justify-content: center; /* alinhamento horizontal*/
+align-items: center;/* alinhamento vertical*/
+padding: 30px; /* espaçamento do interior da pagina */
+flex-direction: column; /* direção que o container esta indo como coluna (um embaixo do outro) */
+}
+
+.ong{ /* parte branca das ongs */
+    display: flex; /*  */
+    flex-direction: row; /* direção de linha que ele esta indo */
+    justify-content:center; 
+    align-items: center;
+    max-width: 100%; /* maximo de tamanho que ela chega */
+    border: solid 3px black;
+    background-color: #fff4c1;
+    border-radius: 20px;
+}
+/* ALINHAMENTO DOS PARAGRAFOS SOBRE AS ONGs */
+#p1{
+    text-align: left;
+}
+
+#p2{
+    text-align: left;
+}
+
+#p3{
+    text-align: left;
+}
+
+.imagem{
+    margin: 10px;
+    display: flex; /* para que a imagem fosse flexivel dentro do seu container */
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.imagem img{
+width:30vw;
+}
+
+
+.texto{ /*  */
+    flex-direction: column;
+    margin:10px;
+    display: flex;
+    width: 40%;
+    padding: 20px;
+    max-height: 400px; /* par se adaptar */
+}
+.texto p{
+overflow: hidden; /* definir como o texto vai se adaptar de acordo com  tela */
+text-align: justify;
+font-size: 2vw;
+}
+
+.contato{
+    justify-content: center; /* se alinhar */
+    align-items: center; /* alinhamento  */
+    flex-direction: row; /* ficar em linha */
+    flex-wrap: wrap; /* quebra de linha */
+    margin: 10px;
+    display: flex; /* para ser flexivel */
+    width: 18%; /* aumentar o tamanho da lateral*/
+    height: 170px; /* aumentar a altura */
+}
+.contato img{ /* icones aumentar */
+max-width: 55px;
+margin: 10px; /* espaçamento em volta */
+}
+/* fazer com que os icones se mexam ao clicar */
+.contato img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+/* responsivo */
+
+@media screen and (min-width: 1300px){
+    #faixa-espaco {
+        width: 90.1%;
+    }
+    .textosobre h1 {
+        font-size: 4.5vw;
+    }
+    .textosobre h3 {
+        font-size: 1.9vw;
+        line-height: 33px;
+    }
+}
+
+@media screen and (max-width: 1096px){
+    #faixa-espaco {
+        width: 85%;
+    }
+    .imagemsobre {
+        width: 51%;
+        height: auto;
+    }
+    .textosobre {
+        width: 46%;
+    }
+    .textosobre h1{
+        font-size: 5vw;
+    }
+    .textosobre h2 {
+        font-size: 2vw;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width:915px) {
+    nav{
+        margin-right: 50px;
+    }
+    
+    .contato{ 
+        margin: 0px; /* juntar os itens */
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contato img{ 
+        max-width: 65px;
+        margin: 15px; 
+        }
+
+    .texto{
+        padding: 10px;
+        margin: 0px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .texto p{
+        font-size: 3vw;
+    }
+
+    .imagem{
+        margin: 0px;
+        width: 50%; 
+    }
+
+    .ong{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:790px){
+    nav{
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textosobre {
+        width: 46%;
+    }
+    .imagemsobre {
+        width: 50%;
+    }
+    .textosobre h3 {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    nav{
+        margin-right: 0;
+    }
+    .botao{
+        display: none;
+    }
+
+    .sobre {
+        padding-bottom: 30px;
+    }
+    #faixa-espaco {
+        justify-content: center;
+        width: 70%;
+    }
+    .textosobre, .imagemsobre  {
+        width: 100%;
+    }
+    .textosobre h1{
+        font-size: 7vw;
+    }
+    .textosobre h3 {
+        font-size: 3.5vw;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    nav{
+        margin-right: 80px;
+    }
+
+    .contato img{ 
+        max-width: 55px;
+        margin: 10px; 
+        }
+
+    .texto p{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:450px){
+    
+    nav{
+        margin-right: 105px;
+    }
+
+    .contato img{ 
+        max-width: 47px;
+        margin: 8px; 
+        }
+
+    .texto p{
+        font-size: 4.9vw;
+    }
+
+    .textosobre h3{
+        font-size: 5vw;
+        line-height: 26px;
+    }
+    
+    .textosobre h1{
+        font-size: 10.5vw;
+    }
+
+    nav .menu #imgmenu{
+        margin-left: 80px;
+    }
+
+    #faixa-espaco {
+        width: 86%;
+    }
+}
+@media screen and (max-width:350px){
+    .contato img{ 
+        max-width: 44px;
+        margin: 6px; 
+    }
+
+    .texto p{
+        font-size: 4.5vw;
+    }
+
+    .textosobre h1 {
+        font-size: 12vw;
+    }
+
+    .textosobre h3 {
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .contato img{ 
+        max-width: 14vw;
+        margin: 2vw; 
+    }
+
+    .texto p{
+        font-size: 5vw;
+        padding-top: 10px;
+    }
+
+    .texto h2{
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .texto{
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+        padding-bottom: 2px;
+            
+    }
+
+    .ong{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        padding: 0px;
+    }
+
+    .imagem img {
+        width: 30vw;
+        padding-top: 5px;
+    }
+    
+}
+

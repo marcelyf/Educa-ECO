@@ -1,0 +1,245 @@
+#logo1{
+	font-size: 4vh;
+	color: rgb(5, 221, 41);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+	}
+
+	#logo1 img{
+		width: 74px;
+		height: 74px;	
+	}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul a:hover {
+  background: #b4ff63;
+  transition: 0.3s;
+}
+#menu li{
+  list-style: none;
+}
+
+#header {
+  box-sizing: border-box;
+  height:120px;
+  padding: 3rem 1rem;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  z-index: 998;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    right: 0px;
+    background: white;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow: auto;
+  }
+
+  .botao{
+	height: 40px;
+	width:120px;
+	border: 1.5px solid black;
+	border-radius: 2em;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 600;
+  font-family: 'Itim', cursive;
+}
+
+	.botao:hover{
+		background: #b4ff63;
+    transition: 0.3s;
+	}
+
+
+#responsivobotao{
+display: none;
+}
+
+#nav{
+	display: flex;
+  width: auto;
+  justify-content: space-between;
+}
+
+#sair{
+padding-left: 12px;
+}
+
+  #nav.active #menu {
+    height: calc(100vh - 100px);
+    visibility: visible;
+  }
+
+  #menu a {
+    color: black;
+    display: block;
+    padding: 1rem;
+    margin: 0px;
+    font-size: 25px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    border-top: 4px solid;
+    width: 30px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.2s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -8px;
+}
+
+footer{
+	display: flex;
+	height: 30vw;
+	text-align: center;
+	justify-content: center;
+  flex-direction: row;
+	align-items:center;
+  justify-content: space-around;
+	font-size: 15px;
+  background-image: url(../img/fundo.jpg);
+	text-decoration: none;
+  
+}
+footer p{
+  font-family: 'Itim', cursive;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: none;
+  margin: 0;
+}
+
+footer h2{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  background-color: transparent;
+}
+
+#logo, #redesocial, #creditos, #contato{
+height: 110px;
+padding: 10px;
+text-align: justify;
+}
+
+footer #logo img{
+  width: 70px;
+  height: 70px;
+}
+
+#redesocial img{
+  width: 30px;
+}
+
+#direitos{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  background-image: url(../img/fundo.jpg);
+}
+
+@media screen and (max-width:900px) {
+  footer{
+    display: flex;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #direitos{
+    width: 100%;
+    text-align: center;
+  padding-top: 40px;
+  }
+
+  footer #logo img{
+    width: 50px;
+    height: 50px;
+  }
+ 
+}
+
+@media screen and (max-width:700px) {
+#responsivobotao{
+  display: block;
+  height: 40px;
+	width:100px;
+	border: 1.5px solid black;
+	border-radius: 2em;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 600;
+  font-family: 'Itim', cursive;
+  }
+
+
+}
+
+@media screen and (max-width:400px) {
+  #logo1{
+    font-size: 2vh;
+    flex-direction: column;
+    color: rgb(5, 221, 41);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    }
+}
