@@ -2,6 +2,9 @@
  Meu projeto do demoday.
  Projeto desenvolvido para o demo day, uma espécie de tcc do curso do Instituto PROA.
  <br>
+ Acesse o projeto: https://marcelyf.github.io/Educa-ECO/
+ <br>
+ <br>
  O site tem como intuito conscientizar a população em relação ao meio ambiente. 
  
  O site foi desenvolvido por dois times: 
